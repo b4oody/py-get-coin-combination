@@ -1,5 +1,3 @@
-from typing import Type
-
 import pytest
 
 from app.main import get_coin_combination
@@ -17,5 +15,8 @@ from app.main import get_coin_combination
         (156, [1, 1, 0, 6]),
     ],
 )
-def test_should_to_return_correct_list(cents: int, list_expected: list) -> None:
+def test_should_to_return_correct_list(
+        cents: int,
+        list_expected: list
+) -> None:
     assert get_coin_combination(cents) == list_expected
